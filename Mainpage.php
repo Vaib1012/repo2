@@ -28,7 +28,7 @@
     <!--Login pop up-->
     <div id="id01" class="modal">
 
-        <form class="modal-content animate" method="post">
+        <form id="loginForm" class="modal-content animate" method="post">
 
             <div class="container">
                 <label for="username"><b>Username</b></label>
@@ -41,7 +41,7 @@
             </div>
             
             <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <button type="button" onclick="document.getElementById('id01').style.display='none';document.getElementById('id01').reset();document.getElementById('loginForm').reset();" class="cancelbtn">Cancel</button>
             </div>
         </form>
     </div>
@@ -49,7 +49,7 @@
     <!--Guest Login pop-up-->
     <div id="id02" class="modal">
 
-        <form class="modal-content animate"  method="post">
+        <form id="guestLoginForm" class="modal-content animate"  method="post">
 
             <div class="container">
                  <label for="username"><b>Username</b></label>
@@ -60,7 +60,7 @@
             </div>
 
             <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+                <button type="button" onclick="document.getElementById('id02').style.display='none';document.getElementById('guestLoginForm').reset();" class="cancelbtn">Cancel</button>
 
             </div>
         </form>
@@ -70,7 +70,7 @@
     <!--Signup pop up-->
     <div id="id03" class="modal"  method="post">
 
-        <form class="modal-content animate" method="post">
+        <form id="signupForm" class="modal-content animate" method="post">
 
             <div class="container">
                 <label for="university"><b>University Name</b></label>
@@ -85,7 +85,7 @@
             </div>
 
             <div class="container" style="background-color:#f1f1f1">
-                <button  type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+                <button  type="button" onclick="document.getElementById('id03').style.display='none';document.getElementById('signupForm').reset();" class="cancelbtn">Cancel</button>
             </div>
         </form>
     </div>
@@ -98,14 +98,17 @@
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function (event) {
             if (event.target == loginModal) {
+                document.getElementById("loginForm").reset();
                 loginModal.style.display = "none";
             }
 
             if (event.target == guestModal) {
+                document.getElementById("guestLoginForm").reset();
                 guestModal.style.display = "none";
             }
 
             if (event.target == signupModal) {
+                document.getElementById("signupForm").reset();
                 signupModal.style.display = "none";
             }
 

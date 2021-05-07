@@ -6,7 +6,7 @@
         $username = test_input($_POST["username"]); 
         $password = test_input($_POST["password"]); 
 
-
+        
         $checkuser = "SELECT user_id FROM user WHERE username=? AND password=?;";
         $stmt =$conn->prepare($checkuser);
         $stmt->bind_param("ss", $username,$password);

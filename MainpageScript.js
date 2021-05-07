@@ -11,15 +11,14 @@ function login() {
                 password:password
             },
             success: function(data) {
+                data=data.trim();
                 var errMsgField = document.getElementById('errorField1');
+                
                 if(data =="0"){
                    window.location.href = "HomePage.php";
-                   
-                }else {
-                    errMsgField.style.color='red';
-                    errMsgField.innerHTML="*Username password does not match";
-                }
-
+                }else{
+                   errMsgField.innerHTML="*Username password does not match";
+                } 
             }
          });  
     }
@@ -42,15 +41,16 @@ function signUp() {
                 university:university 
             },
             success: function(data) {
+                data=data.trim();
                 var errMsgField = document.getElementById('errorField3');
                 if(data =="0"){
                     errMsgField.style.color='green';
                     errMsgField.innerHTML="Registration Successful";
-                   
-                }else {
+                    document.getElementById("signupForm").reset();
+                }else if(data =="-1"){
                     errMsgField.style.color='red';
                     errMsgField.innerHTML="*Username already taken";
-                }
+                } 
             }
          });  
     }
@@ -59,33 +59,29 @@ function signUp() {
     }
 }
 
-
-
-
 function guestLogin() {
     var username=document.getElementById("username2").value;
   
     if(username !=""){
-        
+            
          $.ajax({
-            url: "GuestLogin.php",
+             url: "GuestLogin.php",
             method: "POST",
             data: {username:username
             },
             success: function(data) {
                 data=data.trim();
+                alert(data);
                 var errMsgField = document.getElementById('errorField2');
                 if(data == '0'){
                    window.location.href = "HomePage.php";
                    
                 }else if(data == '2'){
-                    errMsgField.style.color='red';
                     errMsgField.innerHTML="*Username already taken";
                 } else if(data == '1'){
-                    errMsgField.style.color='red';
                     errMsgField.innerHTML="*please signup";   
                 } else {
-                    errMsgField.innerHTML=data.length + "data" + data;   
+                     errMsgField.innerHTML="*server issue";   
                 }
             }
          });  

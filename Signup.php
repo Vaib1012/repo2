@@ -16,16 +16,15 @@
         $num = mysqli_num_rows($res);
 
         if($num == 0){
-
             $sql = "INSERT INTO user (username,password,university_name)
                 VALUES (?,?,?)";
-            $stmt = $conn->prepare($sql);
+            $stmt2 = $conn->prepare($sql);
 
-            $stmt->bind_param("sss",$username, $password, $university);
+            $stmt2->bind_param("sss",$username, $password, $university);
 
-            if($stmt->execute()){
+            if($stmt2->execute()){
                 echo "0";
-            }
+            } 
         } else {
              echo "-1";
         }

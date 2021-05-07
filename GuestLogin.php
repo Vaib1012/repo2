@@ -39,7 +39,7 @@
              echo "2"; //username already exists in the user table
         }
               
-    }
+    } 
     
     function test_input($data) {
     $data = trim($data);

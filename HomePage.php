@@ -67,8 +67,10 @@
 
 
 </div>
-   
-    
+
+<div>
+ <button class="requestButton">Request a School</button>
+<div>
 
     
 <div class="searchBar">
