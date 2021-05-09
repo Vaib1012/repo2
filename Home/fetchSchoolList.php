@@ -1,6 +1,6 @@
 <?php
 
-    include 'connection.php';
+    include '../../Edurater/connection.php';
     $conn= OpenCon();
 
 

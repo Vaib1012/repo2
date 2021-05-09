@@ -2,24 +2,12 @@
 
 /***************************START OF TOP NAV**************************************/
 /*Lining up the two logo's on top of each other for hover effect*/
-.home {
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    width: 50px;
-    height: 21px;
-    }
-  .home_front {
-    z-index: 9999;
-    }
-    .home:hover > .home_front {
-        opacity: 0;
-        transition: 200ms linear;
-    }
-    .home img{
-        position: absolute;
-        left: 14px;
-    }
+
+
+.home img{
+    position: absolute;
+    left: 14px;
+}
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: rgb(0, 0, 0);

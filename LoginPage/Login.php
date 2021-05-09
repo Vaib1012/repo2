@@ -1,34 +1,29 @@
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        include 'connection.php'; 
+        include '../../Edurater/connection.php';
         $conn = OpenCon(); //connect to the db
        
         $username = test_input($_POST["username"]); 
         $password = test_input($_POST["password"]); 
-        $university = test_input($_POST["university"]);
 
-
-        $checkuser = "SELECT user_id FROM user WHERE username=?;";
+        
+        $checkuser = "SELECT user_id FROM user WHERE username=? AND password=?;";
         $stmt =$conn->prepare($checkuser);
-        $stmt->bind_param("s", $username);
+        $stmt->bind_param("ss", $username,$password);
         $stmt->execute();
         $res = $stmt->get_result();
         $num = mysqli_num_rows($res);
 
-        if($num == 0){
-            $sql = "INSERT INTO user (username,password,university_name)
-                VALUES (?,?,?)";
-            $stmt2 = $conn->prepare($sql);
-
-            $stmt2->bind_param("sss",$username, $password, $university);
-
-            if($stmt2->execute()){
-                echo "0";
-            } 
+        if($num == 1){
+            session_start();
+            $_SESSION['username']=$username;
+            $_SESSION['password']=$password;
+            $_SESSION['isLoggedIn']=true;
+                   
+            echo "0";   
         } else {
              echo "-1";
-        }
-              
+        }          
     }
     
     function test_input($data) {

@@ -1,6 +1,6 @@
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        include 'connection.php'; 
+        include '../../Edurater/connection.php';
         $conn = OpenCon(); //connect to the db
        
         $username = test_input($_POST["username"]); 

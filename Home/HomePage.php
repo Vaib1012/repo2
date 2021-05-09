@@ -12,39 +12,39 @@
 </head>
 <body onload="fillTable();showSlides(1);">
      <?php
-        include 'header.php';
+        include '../../Edurater/header.php';
     ?>
 
 <div class="slideshow-container">
 
 <div class="mySlides fade">
-  <img src="images/1.png" style="width:100%">
+  <img src="../../Edurater/images/1.png" style="width:100%">
 </div>
 
 <div class="mySlides fade">
-  <img src="images/2.png" style="width:100%">
+  <img src="../../Edurater/images/2.png" style="width:100%">
 </div>
 
 <div class="mySlides fade">
-  <img src="images/3.png" style="width:100%">
+  <img src="../../Edurater/images/3.png" style="width:100%">
 </div>
 <div class="mySlides fade">
-  <img src="images/4.png" style="width:100%">
+  <img src="../../Edurater/images/4.png" style="width:100%">
   </div>
 <div class="mySlides fade">
-  <img src="images/5.png" style="width:100%">
+  <img src="../../Edurater/images/5.png" style="width:100%">
   </div>
 
 <div class="mySlides fade">
-  <img src="images/6.png" style="width:100%">
+  <img src="../../Edurater/images/6.png" style="width:100%">
 </div>
 
 <div class="mySlides fade">
-  <img src="images/7.png" style="width:100%">
+  <img src="../../Edurater/images/7.png" style="width:100%">
 </div>
 
 <div class="mySlides fade">
-  <img src="images/8.png" style="width:100%">
+  <img src="../../Edurater/images/8.png" style="width:100%">
 </div>
 
 
@@ -68,7 +68,7 @@
 
 </div>
 
-<div>
+<div class="btnContainer">
  <button class="requestButton">Request a School</button>
 <div>
 
@@ -78,7 +78,7 @@
   <button class="searchBtn" type="submit" ><i class="fa fa-search"></i></button>
 </div>
 
-<div >
+<div style="margin-bottom: 10%;" >;
     <div class="tableContainer">
         <h1>Universities List</h1>
 

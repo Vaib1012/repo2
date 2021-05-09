@@ -19,7 +19,7 @@
        
     <div class="Container1">
         <p id="errorField" class="error"></p>
-       <img src="images/Edurater2.0.png" alt="logo">
+       <img src="../../Edurater/images/Edurater2.0.png" alt="logo">
         <h2>Rate your professor anonymously</h2>
         <button class="button1" onclick="document.getElementById('id01').style.display='block'">Login</button>
         <button class="button1" onclick="document.getElementById('id02').style.display='block'">Guest</button>
@@ -41,7 +41,7 @@
             </div>
             
             <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id01').style.display='none';document.getElementById('id01').reset();document.getElementById('loginForm').reset();" class="cancelbtn">Cancel</button>
+                <button type="button" onclick="document.getElementById('id01').style.display='none';document.getElementById('loginForm').reset();" class="cancelbtn">Cancel</button>
             </div>
         </form>
     </div>

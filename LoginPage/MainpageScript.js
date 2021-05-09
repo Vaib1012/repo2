@@ -5,7 +5,7 @@ function login() {
     if(username !="" && password!=""){
         
          $.ajax({
-            url: "Login.php",
+            url: "../../Edurater/LoginPage/Login.php",
             method: "POST",
             data: {username:username, 
                 password:password
@@ -15,7 +15,7 @@ function login() {
                 var errMsgField = document.getElementById('errorField1');
                 
                 if(data =="0"){
-                   window.location.href = "HomePage.php";
+                   window.location.href = "../../Edurater/Home/HomePage.php";
                 }else{
                    errMsgField.innerHTML="*Username password does not match";
                 } 
@@ -34,7 +34,7 @@ function signUp() {
     var university=document.getElementById("university").value;
     if(username !="" && password!="" && university!=""){
          $.ajax({
-            url: "Signup.php",
+            url: "../../Edurater/LoginPage/Signup.php",
             method: "POST",
             data: {username:username, 
                 password:password,
@@ -61,28 +61,25 @@ function signUp() {
 
 function guestLogin() {
     var username=document.getElementById("username2").value;
-  
+    
     if(username !=""){
-            
+        
          $.ajax({
-             url: "GuestLogin.php",
+            url: "../../Edurater/LoginPage/GuestLogin.php",
             method: "POST",
             data: {username:username
             },
             success: function(data) {
                 data=data.trim();
-                alert(data);
                 var errMsgField = document.getElementById('errorField2');
-                if(data == '0'){
-                   window.location.href = "HomePage.php";
-                   
-                }else if(data == '2'){
-                    errMsgField.innerHTML="*Username already taken";
-                } else if(data == '1'){
-                    errMsgField.innerHTML="*please signup";   
-                } else {
-                     errMsgField.innerHTML="*server issue";   
-                }
+            
+                if(data =="0"){
+                   window.location.href = "../../Edurater/Home/HomePage.php";
+                }else if(data == "1"){
+                   errMsgField.innerHTML="*Please signup";
+                }else if(data == "2"){
+                   errMsgField.innerHTML="*Username already taken";
+                } 
             }
          });  
     }

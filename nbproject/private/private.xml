@@ -3,15 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/xampp/htdocs/Edurater/Login.php</file>
-            <file>file:/D:/xampp/htdocs/Edurater/MainpageStyle.css</file>
+            <file>file:/D:/xampp/htdocs/Edurater/LoginPage/GuestLogin.php</file>
+            <file>file:/D:/xampp/htdocs/Edurater/Home/HomePage.php</file>
+            <file>file:/D:/xampp/htdocs/Edurater/LoginPage/Mainpage.php</file>
+            <file>file:/D:/xampp/htdocs/Edurater/LoginPage/Signup.php</file>
+            <file>file:/D:/xampp/htdocs/Edurater/LoginPage/MainpageScript.js</file>
+            <file>file:/D:/xampp/htdocs/Edurater/Home/HomePageScript.js</file>
+            <file>file:/D:/xampp/htdocs/Edurater/LoginPage/Logout.php</file>
+            <file>file:/D:/xampp/htdocs/Edurater/index.php</file>
+            <file>file:/D:/xampp/htdocs/Edurater/LoginPage/Login.php</file>
+            <file>file:/D:/xampp/htdocs/Edurater/Home/fetchSchoolList.php</file>
             <file>file:/D:/xampp/htdocs/Edurater/header.php</file>
-            <file>file:/D:/xampp/htdocs/Edurater/MainpageScript.js</file>
-            <file>file:/D:/xampp/htdocs/Edurater/HomePageScript.js</file>
-            <file>file:/D:/xampp/htdocs/Edurater/Mainpage.php</file>
-            <file>file:/D:/xampp/htdocs/Edurater/headerStyle.css</file>
-            <file>file:/D:/xampp/htdocs/Edurater/HomePage.php</file>
-            <file>file:/D:/xampp/htdocs/Edurater/Logout.php</file>
         </group>
     </open-files>
 </project-private>
