@@ -7,7 +7,7 @@ Google Books API
 
 this package contains **5 classes** : 
 **Book** - this class represents a book entity
-**GoodReads** - this class scrapes data of books of genre Young and Adult from one of the [GoodReads webpage] (https://www.goodreads.com/list/show/43.Best_Young_Adult_Books) and creates a list of books instances. BeautifulSoup library is used to pull and parse the HTML source code of the above website.
+**GoodReads** - this class scrapes data of books of genre Young and Adult from one of the [GoodReads webpage](https://www.goodreads.com/list/show/43.Best_Young_Adult_Books) and creates a list of books instances. BeautifulSoup library is used to pull and parse the HTML source code of the above website.
 **BookDataSet** -this class uses a dataset downloaded from Kaggle to obtain Books' info of young and adult genres. Pandas library is used to read and perform operations on the CSV file. 
 **GoogleBookApi** - this class uses the Google Books API to obtain information on books from the young adult fiction category.
 **BookShelf** - this class performs operations on a books list obtained from any one of the three sources selected by the user. 3 main functions are:
